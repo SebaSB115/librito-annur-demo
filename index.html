@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#404a28">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="Boceto de Librito, el chat web de Librería Annur.">
+  <title>Librito · Boceto del chat web de Annur</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body class="chat-open">
+  <a class="skip-link" href="#store-main">Ir al contenido</a>
+
+  <div class="preview-bar" aria-label="Estado de la presentación">
+    <span><span class="preview-mark" aria-hidden="true"></span> Demo de Librito para Librería Annur</span>
+    <span class="preview-detail">Sitio de muestra · no es la tienda oficial</span>
+  </div>
+
+  <div class="store-shell">
+    <div class="announcement">Historias que acompañan cada etapa de tu lectura</div>
+    <header class="store-header">
+      <a class="store-logo" href="#store-main" aria-label="Librería Annur, inicio"><img src="./annur-logo.svg" alt="Librería Annur"></a>
+      <nav class="store-nav" aria-label="Navegación de muestra">
+        <a href="#store-main" aria-current="page">Inicio</a>
+        <a href="#colecciones">Catálogo</a>
+        <a href="#colecciones">Libros en árabe</a>
+        <a href="#colecciones">Aprende árabe</a>
+        <a href="#colecciones">Niños/as</a>
+      </nav>
+      <div class="store-actions" aria-hidden="true">
+        <span class="store-action-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="10.6" cy="10.6" r="6.8" stroke="currentColor" stroke-width="1.6"/><path d="m16 16 4.4 4.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+        <span class="store-action-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M5 7h14l-1 13H6L5 7Z" stroke="currentColor" stroke-width="1.6"/><path d="M9 8V6a3 3 0 0 1 6 0v2" stroke="currentColor" stroke-width="1.6"/></svg></span>
+      </div>
+    </header>
+
+    <main id="store-main">
+      <section class="store-hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="hero-kicker">Una librería para descubrir</p>
+          <h1 id="hero-title">Cada libro abre<br>un camino.</h1>
+          <p class="hero-description">Encuentra lecturas que te inspiran, enseñan y acompañan. Librito puede ayudarte a elegir por dónde empezar.</p>
+          <a class="hero-link" href="#colecciones">Explorar libros <span aria-hidden="true">↗</span></a>
+          <div class="hero-proof"><span class="proof-rule" aria-hidden="true"></span> Tu próxima lectura empieza con una pregunta.</div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="hero-arch"></div>
+          <div class="hero-halo"></div>
+          <img src="./hero-book.webp" alt="">
+        </div>
+      </section>
+
+      <section id="colecciones" class="collections" aria-labelledby="collections-title">
+        <div class="section-heading"><p>Para cada lector</p><h2 id="collections-title">¿Qué te gustaría descubrir?</h2></div>
+        <div class="collection-grid">
+          <div class="collection-tile"><span class="collection-symbol" aria-hidden="true">✦</span><h3>Libros para empezar</h3><p>Una primera lectura, a tu ritmo.</p></div>
+          <div class="collection-tile"><span class="collection-symbol" aria-hidden="true">۞</span><h3>Aprende árabe</h3><p>Recursos para seguir aprendiendo.</p></div>
+          <div class="collection-tile"><span class="collection-symbol" aria-hidden="true">✳</span><h3>Lecturas infantiles</h3><p>Historias para compartir en familia.</p></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <section id="chat-panel" class="chat-panel" role="dialog" aria-modal="false" aria-labelledby="chat-title">
+    <div class="chat-header">
+      <div class="librito-avatar" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none"><path d="M24 34c-5-4-10-5-17-4V13c7-1 12 0 17 4v17Zm0 0c5-4 10-5 17-4V13c-7-1-12 0-17 4v17Z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M24 17v17M12 19c3-.1 5 .4 7 1.4M29 20.4c2-1 4-1.5 7-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="m35 8 .8 2.2L38 11l-2.2.8L35 14l-.8-2.2L32 11l2.2-.8L35 8Z" fill="currentColor"/></svg>
+      </div>
+      <div class="chat-heading">
+        <h2 id="chat-title">Librito</h2>
+        <p>Tu guía de lectura en Annur</p>
+      </div>
+      <button type="button" id="reset-button" class="header-icon-button" aria-label="Reiniciar conversación" title="Reiniciar conversación">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.5 11a7.5 7.5 0 1 1 2 6.3M4.5 5.5V11H10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button type="button" id="chat-close" class="header-icon-button" aria-label="Cerrar chat" title="Cerrar chat">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+
+    <div class="chat-content">
+      <div class="chat-date">Hoy · Una nueva conversación</div>
+      <div id="messages" class="messages" role="log" aria-live="polite" aria-relevant="additions text" aria-label="Conversación con Librito"></div>
+    </div>
+
+    <div class="composer-wrap">
+      <p class="suggestion-label">Puedes preguntarme</p>
+      <div id="suggestions" class="suggestions" aria-label="Consultas sugeridas"></div>
+      <form id="chat-form" class="composer">
+        <label class="visually-hidden" for="message-input">Escribe tu mensaje a Librito</label>
+        <textarea id="message-input" name="message" rows="1" maxlength="500" placeholder="Escribe tu pregunta…" required></textarea>
+        <button id="send-button" class="send-button" type="submit" aria-label="Enviar mensaje">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 11.6 19.5 4l-4.3 16-3.4-6-7.8-2.4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m11.8 14 7.7-10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </form>
+      <p class="chat-disclaimer">Demo interactiva. Respuestas y fichas ilustrativas; no consulta el catálogo, no guarda mensajes ni crea pedidos.</p>
+    </div>
+  </section>
+
+  <button type="button" id="chat-launcher" class="chat-launcher" aria-controls="chat-panel" aria-expanded="true" aria-label="Cerrar chat con Librito">
+    <svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M24 34c-5-4-10-5-17-4V13c7-1 12 0 17 4v17Zm0 0c5-4 10-5 17-4V13c-7-1-12 0-17 4v17Z" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M24 17v17" stroke="currentColor" stroke-width="2"/><path d="m35 8 .8 2.2L38 11l-2.2.8L35 14l-.8-2.2L32 11l2.2-.8L35 8Z" fill="currentColor"/></svg>
+    <span>Librito</span>
+  </button>
+
+  <dialog id="product-dialog" class="product-dialog" aria-labelledby="dialog-title">
+    <button type="button" class="dialog-close" id="dialog-close" aria-label="Cerrar ficha">×</button>
+    <div id="dialog-cover" class="dialog-cover" aria-hidden="true"><span>Annur</span><strong id="dialog-cover-title"></strong><em>Ejemplo de lectura</em></div>
+    <div class="dialog-copy"><span class="dialog-kicker">Ficha ilustrativa</span><h2 id="dialog-title"></h2><p id="dialog-description"></p><p class="fact-note">Esta ficha es un ejemplo. Precio, stock y contenido deben verificarse en la tienda.</p><button type="button" id="dialog-action" class="primary-button">Seguir conversando</button></div>
+  </dialog>
+</body>
+</html>
